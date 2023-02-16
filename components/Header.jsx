@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import logo from "../src/images/logo.png";
 
 const Header = ({ lastUpdate }) => {
+  const [endpoint, setEndpoint] = useState("");
+
+  const handleEndpointChange = (e) => {
+    setEndpoint(e.target.value);
+  };
+
   return (
     <header className="header bg-gradient-to-l from-purple-600 via-purple-700 to-purple-900 text-white shadow-md p-5">
       <div className="container mx-auto">
